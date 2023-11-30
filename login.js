@@ -2,6 +2,11 @@ const username = document.getElementById("username");
 const password = document.getElementById("password");
 const loginbtn = document.getElementById("loginbutton");
 
+// Dohvat JSON stringa iz localStorage i pretvaranje u objekt
+
+var storedData = localStorage.getItem("data");
+var ucitaniKorisnik = JSON.parse(storedData);
+
 const data = {
   email: "halilsacirovic03@gmail.com",
   password: "halil123",

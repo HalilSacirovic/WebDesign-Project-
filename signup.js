@@ -1,18 +1,21 @@
 const create_account = document.getElementById("create-acc");
 
-const name = document.getElementById("name");
+const namee = document.getElementById("name");
 const lastname = document.getElementById("lastname");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const error_message = document.getElementById("error-message");
 
-const data = {
-  email: "",
-  password: "",
-};
+let counter = 0;
 
 console.log(error_message);
 create_account.addEventListener("click", function () {
+  const data = {
+    dname: namee.value,
+    dlastname: lastname.value,
+    demail: email.value,
+    dpassword: password.value,
+  };
   console.log("email value =>", email.value);
   console.log("password value =>", password.value);
 
@@ -37,5 +40,10 @@ create_account.addEventListener("click", function () {
     console.log("Prvi uslov");
     error_message.classList.remove("hidden");
     error_message.textContent = "Nepravilan unos email-a.Probajte ponovo ";
+  } else {
+    localStorage.setItem(`data`, JSON.stringify(data));
+    window.location.href = "login.html";
   }
+
+  // OVDE KRAJ
 });
