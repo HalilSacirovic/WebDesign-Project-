@@ -1,75 +1,73 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.nav-bar { 
-height: 5vh;
-background-color: rgb(37, 112, 243)
+.nav-bar {
+  height: 5vh;
+  background-color: rgb(37, 112, 243);
 }
 
 .nav-bar .logo h1 {
-font-size: 22px;
-color: white;
-padding-left: 30px;
+  font-size: 22px;
+  color: white;
+  padding-left: 30px;
 }
-.register-section{
-    height: 95vh;
-    
-    padding-top: 100px;
+.register-section {
+  height: 95vh;
+
+  padding-top: 100px;
 }
-.create-account h1
-{
-    color: blue;
-    font-size: 45px;
-    font-weight: bold;
-    padding-bottom: 15px;
+.create-account h1 {
+  color: blue;
+  font-size: 45px;
+  font-weight: bold;
+  padding-bottom: 15px;
 }
 
 .create-account .inputs {
-    display: flex;
-    flex-direction: column;
-
+  display: flex;
+  flex-direction: column;
 }
 
 .create-account .inputs input {
-    width: 400px;
-    line-height: 40px;
-    outline: none;
-    margin-top: 7px;
-    margin-bottom: 7px;
-    padding-left: 5px;
+  width: 400px;
+  line-height: 40px;
+  outline: none;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  padding-left: 5px;
 }
 
 .create-account .inputs label {
-    color: rgb(108, 103, 103);
+  color: rgb(108, 103, 103);
 }
 
-#create-acc { 
-    margin-top: 15px;
-    font-weight: bold;
-    font-size: 14px;
-    outline: none;
-    padding: 15px 30px;
-    color: black;
-    background-color: rgb(255, 185, 54);
-    border: none;
-    border-radius: 3px;
+#create-acc {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 14px;
+  outline: none;
+  padding: 15px 30px;
+  color: black;
+  background-color: rgb(255, 185, 54);
+  border: none;
+  border-radius: 3px;
 }
 
-#login-link{
-    text-decoration: none;
-    color: blue;
-    font-size: 15px;
-    font-weight: bold;
+#login-link {
+  text-decoration: none;
+  color: blue;
+  font-size: 15px;
+  font-weight: bold;
 }
 
-.error-message{ 
-    color: red;
-    font-weight: bold;
-    font-size: 15px;
+.error-message {
+  color: red;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }

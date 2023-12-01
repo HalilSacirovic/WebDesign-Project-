@@ -47,3 +47,20 @@ create_account.addEventListener("click", function () {
 
   // OVDE KRAJ
 });
+
+const api = () => {
+  fetch(
+    "https://api.bestbuy.com/v1/products?format=json&apiKey=iJGg8GCzIN4aLfZSVfnqNTAX"
+  )
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log("podaci => ", data);
+    })
+    .catch((error) => {
+      console.log(error, "error");
+    });
+};
+
+api();
