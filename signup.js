@@ -11,8 +11,6 @@ let counter = 0;
 console.log(error_message);
 create_account.addEventListener("click", function () {
   const data = {
-    dname: namee.value,
-    dlastname: lastname.value,
     demail: email.value,
     dpassword: password.value,
   };
