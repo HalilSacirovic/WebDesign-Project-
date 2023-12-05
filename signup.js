@@ -6,16 +6,22 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const error_message = document.getElementById("error-message");
 
-let counter = 0;
+const inputs = document.querySelectorAll(".is_valid");
 
-console.log(error_message);
 create_account.addEventListener("click", function () {
   const data = {
     demail: email.value,
     dpassword: password.value,
   };
-  console.log("email value =>", email.value);
-  console.log("password value =>", password.value);
+  // console.log("email value =>", email.value);
+  // console.log("password value =>", password.value);
+
+  inputs.forEach((input) => {
+    input.addEventListener("focus", function () {
+      console.log("Input je aktivan");
+      // Dodajte željeni kod koji želite izvršiti kada je input aktivan
+    });
+  });
 
   if (
     !email.value.includes("@") &&

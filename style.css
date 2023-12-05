@@ -37,21 +37,27 @@
   margin-top: 7px;
   margin-bottom: 7px;
   padding-left: 5px;
-  border:1px solid grey;
+  border: 1px solid hwb(0 81% 19%);
   font-size: 18px;
   font-style: italic;
-  border-radius: 5px;
+  border-radius: 3px;
+  transition: ease-in-out all 2;
+}
+
+.create-account .inputs input:focus {
+  border: 1px solid rgb(145, 143, 143);
 }
 
 .create-account .inputs label {
   /* color: rgb(108, 103, 103); */
-  color: blue ;
+  color: blue;
   font-weight: bold;
   font-style: italic;
 }
 
 #create-acc {
   margin-top: 15px;
+  margin-bottom: 15px;
   font-weight: bold;
   font-size: 14px;
   outline: none;
@@ -60,21 +66,21 @@
   background-color: rgb(255, 185, 54);
   border: none;
   border-radius: 3px;
-transition: ease-in-out 0.45s;
-  }
+  transition: ease-in-out 0.45s;
+}
 
-#create-acc:hover{
+#create-acc:hover {
   transform: translateY(-3px);
-  -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 #create-acc:active {
   transform: translateY(-1.5px);
-  -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.45);
--moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.45);
-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.45);
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.45);
 }
 
 #login-link {
@@ -82,6 +88,7 @@ box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.45);
   color: blue;
   font-size: 15px;
   font-weight: bold;
+  padding-top: 0;
 }
 
 .error-message {
@@ -94,16 +101,28 @@ box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.45);
   display: none;
 }
 
-
-
-.parts{
+.part {
+  height: 100%;
   display: flex;
-  
+  flex-direction: column;
+  justify-content: center;
 }
 
-.parts i{
-padding-right: 10px;
-font-size: 25px;
-color: blue;
-padding-top: 10px;
+.parts {
+  display: flex;
+}
+
+.parts i {
+  font-size: 25px;
+  color: rgb(0, 132, 255);
+  padding: 13px 10px 10px 0;
+}
+
+.have_account {
+  display: flex;
+  flex-direction: column;
+}
+
+#arrow-icon {
+  font-size: 26px;
 }
