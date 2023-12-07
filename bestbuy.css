@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none !important;
+}
+
+
+.nav-bar {
+    background-color: rgb(64, 64, 202);
+    height: 8vh;
+}
+
+/* .nav-bar-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+} */
+
+
+.logo h4 {
+    color: white;
+}
+
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+
+}
+
+.search-bar .input-search input {
+    width: 500px;
+    line-height: 40px;
+    border-radius: 4px;
+    outline: none !important;
+    border: none;
+    margin-left: 10px;
+    padding-left: 10px;
+
+
+}
+
+.input-search {
+    position: relative;
+}
+
+
+
+#search-glass {
+    border: none;
+    position: absolute;
+    background-color: white !important;
+    right: 3%;
+    top: 10%;
+    font-size: 20px;
+    color: rgb(69, 69, 69);
+    border-radius: 5px;
+}
+
+
+
+.cart {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.cart a {
+    color: white;
+    text-decoration: none;
+    padding-left: 20px;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+
+.cart a i {
+    padding-right: 5px;
+    font-size: 23px;
+}
+
+
+/* HIDING ARROW FOR INPUT TYPE NUMBER */
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* ends here */
+
+/* 
+///////////////////////////////////////////
+
+HERE IS SECTION FOR PRODUTS 
+
+//////////////////////////////////////////////*/
+
+.section-products {
+    height: 92vh;
+    padding-top: 30px;
+}
+
+.filters {
+    padding: 20px 20px 0 20px;
+    height: 80vh;
+    border: 2px solid grey;
+    overflow-y: scroll;
+
+}
+
+
+
+.filters .sort-price .min-max-price input {
+    width: 40%;
+    line-height: 30px;
+    padding-left: 5px;
+    outline: none;
+}
+
+.filters h5 {
+    padding-bottom: 20px;
+}
+
+.check-in-price {}
+
+.un-order-list {
+    padding: 20px 0;
+}
+
+.filters ul li {
+    font-size: 18px;
+}
+
+.filters ul li a {
+    color: rgb(83, 83, 83);
+    padding-left: 5px;
+}
+
+.filters ul li input {
+    width: 18px;
+    height: 18px;
+}
+
+.input-search {
+    width: 90%;
+    line-height: 30px;
+    padding-left: 8px;
+    border-radius: 3px;
+    border: 1px solid grey;
+    outline: none;
+}
