@@ -1,4 +1,4 @@
-const username = document.getElementById("username");
+const email = document.getElementById("email");
 const password = document.getElementById("password");
 const loginbtn = document.getElementById("loginbutton");
 
@@ -9,32 +9,38 @@ var storedData = localStorage.getItem("data");
 var ucitaniKorisnik = JSON.parse(storedData);
 
 console.log("ucitani korisnik", ucitaniKorisnik);
-console.log(username.value + " " + password.value);
+console.log(email.value + " " + password.value);
+
 
 const data = {
-  username: "",
-  password: "",
+  email: ucitaniKorisnik.demail,
+  password: ucitaniKorisnik.dpassword,
 };
 
 console.log(data);
 loginbtn.addEventListener("click", () => {
-  console.log("input values => ", username.value + " " + password.value);
-  console.log(
-    "ucitani korisnik =>",
-    ucitaniKorisnik.demail + " " + ucitaniKorisnik.dpassword
-  );
+  // console.log("input values => ", username.value + " " + password.value);
+  // console.log(
+  //   "ucitani korisnik =>",
+  //   ucitaniKorisnik.demail + " " + ucitaniKorisnik.dpassword
+  // );
 
-  data.username = username.value;
-  data.password = password.value;
+//   console.log(username.value.length, "  username duzina ");
+// console.log("password duzina " , password.value.length);
 
-  console.log("DATA", data.username + " DATAPASSWORD " + data.password);
+// console.log("ucitani korisnik email", ucitaniKorisnik.demail.length);
+// console.log("ucitani korisnik password ", ucitaniKorisnik.dpassword.length);
 
-  if (data.username === ucitaniKorisnik.dname) {
-    alert("radi");
-  }
+
+
+  // console.log("DATA", data.username + " DATAPASSWORD " + data.password);
+
+  // if (data.email === email.value) {
+  //   alert("radi");
+  // }
   if (
-    ucitaniKorisnik.email == data.username &&
-    ucitaniKorisnik.password == data.password
+    email.value== data.email &&
+    password.value == data.password
   ) {
     window.location.href = "index.html";
   }
