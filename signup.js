@@ -8,14 +8,11 @@ const error_message = document.getElementById("error-message");
 
 const inputs = document.querySelectorAll(".is_valid");
 
-
 create_account.addEventListener("click", function () {
   const data = {
     demail: email.value,
     dpassword: password.value,
   };
-
-  
 
   // console.log("email value =>", email.value);
   // console.log("password value =>", password.value);
@@ -49,37 +46,7 @@ create_account.addEventListener("click", function () {
     error_message.classList.remove("hidden");
     error_message.textContent = "Nepravilan unos email-a.Probajte ponovo ";
   } else {
- 
-
     localStorage.setItem(`data`, JSON.stringify(data));
-
-    const fs = require('fs');
-
-    // Your code for localStorage goes here
-    
-    // Read the contents of the JSON file
-    const jdata = fs.readFileSync('data.json', 'utf-8');
-    // Parse the JSON data into a JavaScript object
-    const jsonData = JSON.parse(jdata);
-    
-    console.log("Before Adding data", JSON.stringify(jsonData, null, 4));
-    
-    // Modify the JavaScript object by adding new data
-    jsonData.users.push(data);
-    
-    // Convert the JavaScript object back into a JSON string
-    const jsonString = JSON.stringify(jsonData, null, 4);
-    
-    fs.writeFileSync('data.json', jsonString, 'utf-8', (err) => {
-      if (err) throw err;
-      console.log('Data added to file');
-    });
-    
-    const update_data = fs.readFileSync('data.json', 'utf-8');
-    const updated_jsonData = JSON.parse(update_data);
-    console.log("After Adding data", JSON.stringify(updated_jsonData, null, 4));
-    
-    // console.log("jdata",jdata)
     window.location.href = "login.html";
   }
 
