@@ -25,7 +25,7 @@ const getProducts = () => {
   
 
 
-
+// RENDER PRODUCT FUNCTION HERE
 
 
 const renderProducts = () => {
@@ -41,7 +41,7 @@ const renderProducts = () => {
         products_img.classList.add("product-img")
         const img_product = document.createElement("img");
 
-// ///////////////////////////////////////////////////////////////////
+// CREATED SOME DIVS AND ELEMENTS TO WORK WITH
         const product_description = document.createElement("div");
         product_description.classList.add("product-description")
         const product_description_name = document.createElement("div");
@@ -73,11 +73,7 @@ const renderProducts = () => {
         i_box.classList.add("fa-box-open")
 
 
-// //////////////////////////////////////////////////////////////////
-
-
-
-// //////////////////////////////////////////////////
+// CREATING DIVS  AND SOME ELEMENTS 
         const product_price= document.createElement("div");
         product_price.classList.add("product-price")
         const price_tag= document.createElement("div");
@@ -101,9 +97,9 @@ const renderProducts = () => {
         const h4_price = document.createElement("h4");
         h4_price.setAttribute("id","fullprice");   
 
-// //////////////////////////////////////////////////////
 
 
+// UPDATING CREATED DIVS AND APPENDING CHILD TO THEM
 
         p_sku.textContent = item.sku;
         p_model.textContent = "ovde treba api za broj"
@@ -146,7 +142,7 @@ const renderProducts = () => {
 
         price_tag_save.appendChild(p_save);
 
-        h4_price.textContent= item.salePrice;
+        h4_price.textContent= `$${item.salePrice}`;
 
         price_tag_full.appendChild(h4_price);
 
@@ -170,6 +166,9 @@ const renderProducts = () => {
 
 getProducts();
   
+
+
+// RENDERING FILTERING PRODUCT AGAIN
 
 
 const renderFilteredProducts = (filteredArray) => {
@@ -289,7 +288,8 @@ const renderFilteredProducts = (filteredArray) => {
 
         price_tag_save.appendChild(p_save);
 
-        h4_price.textContent= item.salePrice;
+       
+        h4_price.textContent= `$${item.salePrice}`
 
         price_tag_full.appendChild(h4_price);
 
