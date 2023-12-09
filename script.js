@@ -378,3 +378,20 @@ document.getElementById("filter-min-max").addEventListener("click",function()
     })
     renderFilteredProducts(filteredArray)
 })
+
+
+document.getElementById("name-search").addEventListener("click",function(){
+    const search_value = document.getElementById("input-search-brand").value.toLowerCase();
+    const filteredArray = array.filter((item) => {
+        return item.name && item.name.toLowerCase().includes(search_value);
+    });
+    renderFilteredProducts(filteredArray);
+
+})
+document.getElementById("clear-search").addEventListener("click",function(){
+ 
+    document.getElementById("input-search-brand").value = ""
+    renderFilteredProducts(array);
+
+})
+
