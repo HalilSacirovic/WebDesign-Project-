@@ -363,3 +363,18 @@ document.getElementById("search").addEventListener("input", () => {
     });
     renderFilteredProducts(filteredArray);
 });
+
+
+document.getElementById("filter-min-max").addEventListener("click",function()
+{
+    const min = document.getElementById("min").value;
+    const max= document.getElementById("max").value;
+
+    const filteredArray = array.filter((item)=>{
+        if(item.salePrice >= min && item.salePrice<=max)
+        {
+            return item
+        }
+    })
+    renderFilteredProducts(filteredArray)
+})
