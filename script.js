@@ -411,15 +411,3 @@ document.getElementById("clear-search").addEventListener("click",function(){
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// JS FOR PRODUCT.HTML
-
-// const urlParams = new URLSearchParams(window.location.search);
-// let megaIndex = urlParams.get("megaIndex");
-
-// const urlParams = new URLSearchParams(window.location.search);
-//       if (data.userId) {
-//         let megaIndex = urlParams.get("megaIndex");
-//         localStorage.setItem("auth_token", data.token);
-//         localStorage.setItem("userId", data.userId);
-//         // alert("Prijava uspesna!");
-//         window.location.href = "pitanje.html?megaIndex=0";
