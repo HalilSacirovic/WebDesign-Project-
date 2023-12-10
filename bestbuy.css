@@ -75,16 +75,6 @@
   font-size: 23px;
 }
 
-/* HIDING ARROW FOR INPUT TYPE NUMBER */
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* ends here */
-
 /* 
 ///////////////////////////////////////////
 
@@ -118,8 +108,7 @@ HERE IS SECTION FOR PRODUTS
   padding-bottom: 20px;
 }
 
-.check-in-price {
-}
+.check-in-price {}
 
 .un-order-list {
   padding: 20px 0;
@@ -261,5 +250,123 @@ PRODUCTS SECTION STYLE
 }
 
 #add-to-cart i {
+  padding-right: 10px;
+}
+
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* PRODUCT.HTML STYLESSS  */
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.product {
+  height: 92vh;
+  /* background-color: red;s */
+  padding-top: 50px;
+}
+
+.prod-images {
+  height: 100%;
+  /* background-color: blue; */
+}
+
+.prod-images img {
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.prod-lg-img {
+  height: 100%;
+  /* background-color: purple; */
+}
+
+.prod-description {
+  height: 100%;
+  /* background-color: pink; */
+  padding: 0 30px 30px 30px;
+  /* justify-content: center; */
+}
+
+.prod-description .header h4 {
+  font-weight: bold;
+}
+
+.prod-description .header .header-info {
+  display: flex;
+  justify-content: space-between;
+  /* width: 70%; */
+  font-size: 14px;
+}
+
+.prod-description .header .header-review i {
+
+  color: #ffe000;
+}
+
+.prod-description .prod-price h4 {
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 20px;
+}
+
+
+.prod-description .prod-availability .prod-delivery {
+  display: flex;
+}
+
+.prod-pickup {
+  border: 1px solid grey;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 120px;
+  transition: all ease-in-out 0.4s;
+
+}
+
+.prod-pickup:hover {
+  background-color: rgb(239, 239, 239);
+  border: 1px solid blue;
+  cursor: pointer;
+}
+
+.prod-shipping:hover {
+  background-color: rgb(239, 239, 239);
+  border: 1px solid blue;
+  cursor: pointer;
+}
+
+
+
+.prod-shipping {
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 120px;
+  margin-right: 10px;
+  padding: 10px;
+  transition: all ease-in-out 0.4s;
+}
+
+.prod-availability h6 {
+  padding-top: 15px;
+}
+
+.prod-add-to-cart button {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 30px;
+  width: 90%;
+  background-color: #ffe000;
+  padding: 8px 0;
+
+}
+
+.prod-add-to-cart button i {
   padding-right: 10px;
 }

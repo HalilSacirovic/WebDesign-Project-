@@ -104,8 +104,18 @@ const renderProducts = () => {
         p_sku.textContent = item.sku;
         p_model.textContent = "ovde treba api za broj"
 
-        a_1.href =item.url 
+        
+        
         a_1.textContent = item.name;
+        a_1.classList.add("a_1");
+        
+        a_1.addEventListener("click",function()
+        {
+                a_1.href ="product.html" 
+                localStorage.setItem(`product1`, JSON.stringify(item));
+               
+            })
+        
 
         img_product.src = item.image
         img_product.width ="250 "
@@ -252,6 +262,9 @@ const renderFilteredProducts = (filteredArray) => {
 
         a_1.href =item.url 
         a_1.textContent = item.name;
+        
+
+
 
         img_product.src = item.image
         img_product.width ="250 "
@@ -395,3 +408,18 @@ document.getElementById("clear-search").addEventListener("click",function(){
 
 })
 
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// JS FOR PRODUCT.HTML
+
+// const urlParams = new URLSearchParams(window.location.search);
+// let megaIndex = urlParams.get("megaIndex");
+
+// const urlParams = new URLSearchParams(window.location.search);
+//       if (data.userId) {
+//         let megaIndex = urlParams.get("megaIndex");
+//         localStorage.setItem("auth_token", data.token);
+//         localStorage.setItem("userId", data.userId);
+//         // alert("Prijava uspesna!");
+//         window.location.href = "pitanje.html?megaIndex=0";
