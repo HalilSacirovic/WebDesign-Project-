@@ -471,3 +471,8 @@ PRODUCTS SECTION STYLE
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
+
+
+.feature-details {
+  padding-top: 30px !important;
+}
