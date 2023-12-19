@@ -186,6 +186,7 @@ const renderFilteredProducts = (filteredArray) => {
     listproducts.innerHTML = "";
     filteredArray.forEach((item, index) => {
 
+       
         const list_products_item = document.createElement("div");
         list_products_item.classList.add("list-products-item")
 
@@ -193,7 +194,7 @@ const renderFilteredProducts = (filteredArray) => {
         products_img.classList.add("product-img")
         const img_product = document.createElement("img");
 
-// ///////////////////////////////////////////////////////////////////
+// CREATED SOME DIVS AND ELEMENTS TO WORK WITH
         const product_description = document.createElement("div");
         product_description.classList.add("product-description")
         const product_description_name = document.createElement("div");
@@ -225,11 +226,7 @@ const renderFilteredProducts = (filteredArray) => {
         i_box.classList.add("fa-box-open")
 
 
-// //////////////////////////////////////////////////////////////////
-
-
-
-// //////////////////////////////////////////////////
+// CREATING DIVS  AND SOME ELEMENTS 
         const product_price= document.createElement("div");
         product_price.classList.add("product-price")
         const price_tag= document.createElement("div");
@@ -253,18 +250,25 @@ const renderFilteredProducts = (filteredArray) => {
         const h4_price = document.createElement("h4");
         h4_price.setAttribute("id","fullprice");   
 
-// //////////////////////////////////////////////////////
 
 
+// UPDATING CREATED DIVS AND APPENDING CHILD TO THEM
 
         p_sku.textContent = item.sku;
         p_model.textContent = "ovde treba api za broj"
 
-        a_1.href =item.url 
-        a_1.textContent = item.name;
         
-
-
+        
+        a_1.textContent = item.name;
+        a_1.classList.add("a_1");
+        
+        a_1.addEventListener("click",function()
+        {
+                a_1.href ="product.html" 
+                localStorage.setItem(`product1`, JSON.stringify(item));
+               
+            })
+        
 
         img_product.src = item.image
         img_product.width ="250 "
@@ -301,8 +305,7 @@ const renderFilteredProducts = (filteredArray) => {
 
         price_tag_save.appendChild(p_save);
 
-       
-        h4_price.textContent= `$${item.salePrice}`
+        h4_price.textContent= `$${item.salePrice}`;
 
         price_tag_full.appendChild(h4_price);
 

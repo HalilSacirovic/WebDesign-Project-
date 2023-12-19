@@ -263,7 +263,7 @@ PRODUCTS SECTION STYLE
 
 
 .product {
-  height: 92vh;
+  height: 85vh;
   /* background-color: red;s */
   padding-top: 50px;
 }
@@ -377,8 +377,8 @@ PRODUCTS SECTION STYLE
 
 
 .details {
-  height: 40vh;
-  padding-top: 50px;
+  height: 50vh;
+  /* padding-top: 10px; */
 }
 
 .details .features {
@@ -475,4 +475,21 @@ PRODUCTS SECTION STYLE
 
 .feature-details {
   padding-top: 30px !important;
+}
+
+
+.review-list {}
+
+
+.review-rating-div {
+  display: flex;
+}
+
+.review-rating-div i {
+  padding-top: 10px;
+  padding-right: 5px;
+}
+
+.review-rating-div h2 {
+  font-weight: bold;
 }
