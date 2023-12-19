@@ -21,8 +21,8 @@ const shipping_date = document.querySelector(".shipping-date")
 const prod_add_to_cart = document.querySelector(".prod-add-to-cart")
 
 
-const img_header = document.querySelector(".img-header")
-const features_stars = document.querySelector(".features-stars")
+const img_header = document.querySelectorAll(".img-header")
+const features_stars = document.querySelectorAll(".features-stars")
 
 const description1 = document.querySelector(".description1")
 
@@ -81,9 +81,19 @@ const h6_features = document.createElement("h6")
 h6_features.textContent = renderedProduct.name;
 
 const imgsmallClone = imgsmall.cloneNode(true);
-img_header.appendChild(imgsmallClone);
-img_header.appendChild(h6_features)
-features_stars.appendChild(span)
+// img_header.appendChild(imgsmallClone);
+// img_header.appendChild(h6_features)
+// features_stars.appendChild(span)
+
+img_header.forEach((element) => {
+    element.appendChild(imgsmallClone.cloneNode(true));
+    element.appendChild(h6_features.cloneNode(true));
+});
+  
+  // Assuming span is a DOM element you want to append
+  features_stars.forEach((element) => {
+    element.appendChild(span.cloneNode(true));
+  });
 
 const p_description = document.createElement("p")
 if(renderedProduct.plot  === null)
