@@ -107,3 +107,72 @@ else{
 
 
 description1.appendChild(p_description)
+
+
+const table = document.querySelector(".table-test");
+
+console.log(table.rows[0].children[1])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+for(var i=0;i<table.rows.length;i++)
+{
+  console.log(table.rows[i].children[1].ariaValueNow)
+  if(table.rows[i].children[1].ariaValueNow === 'genre')
+  {
+    table.rows[i].children[1].textContent = renderedProduct.genre
+  } 
+  // if(table.rows[i].children[1].ariaValueNow === 'subgenre')
+  // {
+  //   table.rows[i].children[1].textContent = renderedProduct.genre
+  // } 
+  // if(table.rows[i].children[1].ariaValueNow === 'countries')
+  // {
+  //   table.rows[i].children[1].textContent = renderedProduct.genre
+  // } 
+  // if(table.rows[i].children[1].ariaValueNow === 'tags')
+  // {
+  //   table.rows[i].children[1].textContent = renderedProduct.genre
+  // } 
+  // if(table.rows[i].children[1].ariaValueNow === 'formatt')
+  // {
+  //   table.rows[i].children[1].textContent = renderedProduct.genre
+  // } 
+
+  // if(table.rows[i].children[1].ariaValueNow === 'programtype')
+  // {
+  //   table.rows[i].children[1].textContent = renderedProduct.genre
+  // } 
+
+  // if(table.rows[i].children[1].ariaValueNow === 'region')
+  // {
+  //   table.rows[i].children[1].textContent = renderedProduct.genre
+  // } 
+  // if(table.rows[i].children[1].ariaValueNow === 'studio')
+  // {
+  //   table.rows[i].children[1].textContent = renderedProduct.genre
+  // } 
+  // if(table.rows[i].children[1].ariaValueNow === 'moods')
+  // {
+  //   table.rows[i].children[1].textContent = renderedProduct.genre
+  // } 
+}
