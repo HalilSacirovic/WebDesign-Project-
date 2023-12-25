@@ -4,8 +4,11 @@ var cartarray = JSON.parse(storedProduct);
 console.log(cartarray)
 
 
-
-
+const zero_products = document.querySelector(".zero-products");
+if(cartarray.length === 0)
+{
+    zero_products.style  = 'display:block'
+}
 
 
 const renderProducts = () => {

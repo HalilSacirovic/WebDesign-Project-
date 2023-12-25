@@ -525,3 +525,8 @@ td {
 .favorite-products h1 {
   padding: 50px 0px 50px 10px;
 }
+
+
+.zero-products {
+  display: none;
+}
