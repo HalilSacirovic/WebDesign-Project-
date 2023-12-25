@@ -1,7 +1,7 @@
 
 
 var array = [];
-
+var cart = []
 
 
 const getProducts = () => {
@@ -85,8 +85,20 @@ const renderProducts = () => {
         const add_to_cart= document.createElement("div");
         add_to_cart.classList.add("add-to-cart")
 
-        const a_add_to_cart = document.createElement("a")
+        const a_add_to_cart = document.createElement("button")
+
+
+
         a_add_to_cart.setAttribute("id","add-to-cart")
+
+       
+        
+
+        // a_add_to_cart.addEventListener("click",function(){
+          
+          
+            
+        // })
 
         const i_cart = document.createElement("i")
 
@@ -97,6 +109,7 @@ const renderProducts = () => {
         const h4_price = document.createElement("h4");
         h4_price.setAttribute("id","fullprice");   
 
+        const favorite_counter = document.getElementById("favorite_counter")
 
 
 // UPDATING CREATED DIVS AND APPENDING CHILD TO THEM
@@ -115,7 +128,24 @@ const renderProducts = () => {
                 localStorage.setItem(`product1`, JSON.stringify(item));
                
             })
+
+// ///////////////////////////////////////////////////////
+
+        a_add_to_cart.addEventListener("click",function(){
+          
+        if(!cart.includes(item))
+        {
+            cart.push(item);
+            alert("Succesfully added in Cart")    
+        }
+        else{
+            console.log("item je vec u korpi")
+        }
+        console.log(cart)
+        })
+            
         
+// //////////////////////////////////////////////////////////
 
         img_product.src = item.image
         img_product.width ="250 "
@@ -410,6 +440,22 @@ document.getElementById("clear-search").addEventListener("click",function(){
     renderFilteredProducts(array);
 
 })
+
+
+
+document.getElementById("cart").addEventListener("click",()=>{
+    localStorage.setItem('cartarray', JSON.stringify(cart))
+    window.location.href = 'cart.html'
+    
+    // let storedProduct = localStorage.getItem("cartarray")
+    // var renderedProduct = JSON.parse(storedProduct);
+
+    console.log(cart)
+    // console.log('stored product =>',storedProduct)
+    console.log("rendered products =>" ,   renderedProduct)
+})
+
+// console.log(cart)
 
 
 

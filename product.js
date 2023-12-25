@@ -176,3 +176,5 @@ for(var i=0;i<table.rows.length;i++)
   //   table.rows[i].children[1].textContent = renderedProduct.genre
   // } 
 }
+
+

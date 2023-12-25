@@ -64,6 +64,7 @@
   text-decoration: none;
   font-size: 19px;
   font-weight: 600;
+
 }
 
 .cart a:not(:first-child) {
@@ -74,6 +75,11 @@
   padding-right: 5px;
   font-size: 23px;
 }
+
+
+
+
+
 
 /* 
 ///////////////////////////////////////////
@@ -281,7 +287,15 @@ PRODUCTS SECTION STYLE
 
 .prod-lg-img {
   height: 100%;
+
+
   /* background-color: purple; */
+}
+
+.prod-lg-img img {
+  border: 3px solid black;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .prod-description {
@@ -503,3 +517,11 @@ td {
 }
 
 /* */
+
+
+
+
+
+.favorite-products h1 {
+  padding: 50px 0px 50px 10px;
+}
