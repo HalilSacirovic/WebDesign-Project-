@@ -295,7 +295,7 @@ PRODUCTS SECTION STYLE
 .prod-lg-img img {
   border: 3px solid black;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 25px;
 }
 
 .prod-description {
@@ -553,5 +553,9 @@ td {
 .product-img img {
   border: 3px solid black;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 25px;
+}
+
+.a_1 {
+  cursor: pointer;
 }

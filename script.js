@@ -135,6 +135,9 @@ const renderProducts = () => {
           
         if(!cart.includes(item))
         {
+            
+            a_add_to_cart.style.background = "red"
+            a_add_to_cart.textContent = "Added in a cart"
             cart.push(item);
             alert("Succesfully added in Cart")    
         }
@@ -216,7 +219,6 @@ const renderFilteredProducts = (filteredArray) => {
     listproducts.innerHTML = "";
     filteredArray.forEach((item, index) => {
 
-       
         const list_products_item = document.createElement("div");
         list_products_item.classList.add("list-products-item")
 
@@ -268,8 +270,20 @@ const renderFilteredProducts = (filteredArray) => {
         const add_to_cart= document.createElement("div");
         add_to_cart.classList.add("add-to-cart")
 
-        const a_add_to_cart = document.createElement("a")
+        const a_add_to_cart = document.createElement("button")
+
+
+
         a_add_to_cart.setAttribute("id","add-to-cart")
+
+       
+        
+
+        // a_add_to_cart.addEventListener("click",function(){
+          
+          
+            
+        // })
 
         const i_cart = document.createElement("i")
 
@@ -280,11 +294,12 @@ const renderFilteredProducts = (filteredArray) => {
         const h4_price = document.createElement("h4");
         h4_price.setAttribute("id","fullprice");   
 
+        const favorite_counter = document.getElementById("favorite_counter")
 
 
 // UPDATING CREATED DIVS AND APPENDING CHILD TO THEM
 
-        p_sku.textContent = item.sku;
+        p_sku.textContent = `Sku:${item.sku}`;
         p_model.textContent = `Model:${item.modelNumber}`
 
         
@@ -298,7 +313,24 @@ const renderFilteredProducts = (filteredArray) => {
                 localStorage.setItem(`product1`, JSON.stringify(item));
                
             })
+
+// ///////////////////////////////////////////////////////
+
+        a_add_to_cart.addEventListener("click",function(){
+          
+        if(!cart.includes(item))
+        {
+            cart.push(item);
+            alert("Succesfully added in Cart")    
+        }
+        else{
+            console.log("item je vec u korpi")
+        }
+        console.log(cart)
+        })
+            
         
+// //////////////////////////////////////////////////////////
 
         img_product.src = item.image
         img_product.width ="250 "
@@ -331,7 +363,7 @@ const renderFilteredProducts = (filteredArray) => {
         add_to_cart.appendChild(a_add_to_cart);
         
         p_save.appendChild(span_save);
-        p_save.textContent="Was $800.99"
+        p_save.textContent=`Was $${item.regularPrice}`
 
         price_tag_save.appendChild(p_save);
 
@@ -353,6 +385,7 @@ const renderFilteredProducts = (filteredArray) => {
 
         listproducts.appendChild(list_products_item)
         
+
 
     })
 }
@@ -447,8 +480,8 @@ document.getElementById("cart").addEventListener("click",()=>{
     localStorage.setItem('cartarray', JSON.stringify(cart))
     window.location.href = 'cart.html'
     
-    // let storedProduct = localStorage.getItem("cartarray")
-    // var renderedProduct = JSON.parse(storedProduct);
+    let storedProduct = localStorage.getItem("cartarray")
+    var renderedProduct = JSON.parse(storedProduct);
 
     console.log(cart)
     // console.log('stored product =>',storedProduct)
