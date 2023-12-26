@@ -530,3 +530,28 @@ td {
 .zero-products {
   display: none;
 }
+
+#add-to-cart {
+  transition: all ease-in-out 0.4s;
+}
+
+#add-to-cart:hover {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  transform: translateY(-2px);
+}
+
+#add-to-cart:active {
+  -webkit-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.75);
+  transform: translateY(-1px);
+}
+
+
+.product-img img {
+  border: 3px solid black;
+  padding: 5px;
+  border-radius: 5px;
+}

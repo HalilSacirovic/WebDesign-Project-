@@ -114,8 +114,8 @@ const renderProducts = () => {
 
 // UPDATING CREATED DIVS AND APPENDING CHILD TO THEM
 
-        p_sku.textContent = item.sku;
-        p_model.textContent = "ovde treba api za broj"
+        p_sku.textContent = `Sku:${item.sku}`;
+        p_model.textContent = `Model:${item.modelNumber}`
 
         
         
@@ -178,7 +178,7 @@ const renderProducts = () => {
         add_to_cart.appendChild(a_add_to_cart);
         
         p_save.appendChild(span_save);
-        p_save.textContent="Was $800.99"
+        p_save.textContent=`Was $${item.regularPrice}`
 
         price_tag_save.appendChild(p_save);
 
@@ -285,7 +285,7 @@ const renderFilteredProducts = (filteredArray) => {
 // UPDATING CREATED DIVS AND APPENDING CHILD TO THEM
 
         p_sku.textContent = item.sku;
-        p_model.textContent = "ovde treba api za broj"
+        p_model.textContent = `Model:${item.modelNumber}`
 
         
         
