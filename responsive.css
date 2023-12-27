@@ -41,6 +41,16 @@
         width: 380px;
     }
 
+    .prod-lg-img img {
+        height: 500px;
+        /* width: 500px; */
+    }
+
+    .prod-description .prod-price h4 {
+        font-size: 22px !important;
+        padding-top: 10px !important;
+    }
+
 
 }
 
@@ -68,6 +78,25 @@
         align-items: center;
         justify-content: end;
         height: 100%;
+    }
+
+    .prod-lg-img img {
+        height: 400px;
+        /* width: 500px; */
+    }
+
+    .prod-description .header h4 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .prod-add-to-cart button {
+
+        margin-top: 15px;
+
     }
 }
 
@@ -108,3 +137,12 @@
         padding-right: 20px;
     }
 }
+
+
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+/* FOR PRODUCT.HTML */
