@@ -115,29 +115,20 @@ const renderProducts = () => {
     var renderedCart = JSON.parse(storedCart);
 
     a_add_to_cart.addEventListener("click", function () {
-      if (!renderedCart.includes(item)) {
-        a_add_to_cart.style.background = "red";
-        a_add_to_cart.textContent = "Added in a cart";
-        cart.push(item);
-        localStorage.setItem("cartarray", JSON.stringify(cart));
-        alert("Succesfully added in Cart");
-      } else {
-        console.log("item je vec u korpi");
-      }
 
-      //   if (!cart.includes(item)) {
-      //     a_add_to_cart.style.background = "red";
-      //     a_add_to_cart.textContent = "Added in a cart";
-      //     cart.push(item);
-      //     localStorage.setItem("cartarray", JSON.stringify(cart));
-      //     alert("Succesfully added in Cart");
-      //   } else {
-      //     console.log("item je vec u korpi");
-      //   }
-      //   console.log(cart);
+        if (!cart.includes(item)) {
+          a_add_to_cart.style.background = "rgb(255, 115, 0)";
+          a_add_to_cart.textContent = "Added in a cart";
+          cart.push(item);
+          localStorage.setItem("cartarray", JSON.stringify(cart));
+          alert("Succesfully added in Cart");
+        } else {
+          console.log("item je vec u korpi");
+        }
+        console.log(cart);
     });
 
-    console.log(renderedCart.includes(item));
+    // console.log(renderedCart.includes(item));
 
     // //////////////////////////////////////////////////////////
 
