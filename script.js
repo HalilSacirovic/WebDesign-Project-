@@ -541,3 +541,11 @@ check.forEach((element,index )=> {
  })
  
 });
+
+
+window.addEventListener("load",()=>{
+ if(window.innerWidth<600)
+ {
+  document.getElementById("search").placeholder = "Search for product"
+ }
+})

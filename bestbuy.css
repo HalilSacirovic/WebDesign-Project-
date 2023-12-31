@@ -655,3 +655,21 @@ td {
 .a_1 {
   cursor: pointer;
 }
+
+
+.offcanvas-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.offcanvas-body a {
+  font-size: 20px;
+  color: grey;
+  padding-top: 10px;
+  transition: all 0.4s ease-in;
+}
+
+.offcanvas-body a:hover {
+
+  color: #00a1e7;
+}
