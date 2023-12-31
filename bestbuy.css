@@ -190,7 +190,7 @@ HERE IS SECTION FOR PRODUTS
   font-size: 13px;
   position: relative;
   overflow: hidden;
-  background-color: white;
+  background-color: rgb(247, 255, 255);
   outline: 2px solid #2c9caf;
 
 }
@@ -208,6 +208,7 @@ HERE IS SECTION FOR PRODUTS
   left: -50px;
   top: 0;
   width: 0;
+  outline: 2px solid #70bdca;
   height: 100%;
   background-color: #2c9caf;
   transform: skewX(45deg);
@@ -218,6 +219,13 @@ HERE IS SECTION FOR PRODUTS
 .custom-btn:hover::before {
   width: 250%;
 }
+
+
+.un-order-list li a {
+  color: #00a1e7 !important;
+}
+
+
 
 /*
 //////////////////////////////////////////////////

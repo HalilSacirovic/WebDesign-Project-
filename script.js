@@ -422,3 +422,122 @@ document.getElementById("cart").addEventListener("click", () => {
 // console.log(cart)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+const c1 = document.getElementById("price1");
+
+c1.addEventListener("click",function()
+{
+ if(c1.checked){
+  console.log(document.getElementById("price1").value)
+  const filteredArray = array.filter((item) => {
+    if (item.salePrice <25 ) {
+      return item
+    }
+  }).sort((a,b)=>a.salePrice - b.salePrice)
+  renderFilteredProducts(filteredArray);
+ }
+ else{
+  renderProducts()
+ }
+})
+document.getElementById("price2").addEventListener("select",function()
+{
+  const filteredArray = array.filter((item) => {
+    if (item.salePrice >25 && item.salePrice<50 ) {
+      return item
+    }
+  }).sort((a,b)=>a.salePrice - b.salePrice)
+  renderFilteredProducts(filteredArray);
+ 
+})
+document.getElementById("price3").addEventListener("",function()
+{
+  const filteredArray = array.filter((item) => {
+    if (item.salePrice>50 && item.salePrice <75 ) {
+      return item
+    }
+  }).sort((a,b)=>a.salePrice - b.salePrice)
+  renderFilteredProducts(filteredArray);
+ 
+})
+document.getElementById("price4").addEventListener("",function()
+{
+  const filteredArray = array.filter((item) => {
+    if (item.salePrice> 75 && item.salePrice <100 ) {
+      return item
+    }
+  }).sort((a,b)=>a.salePrice - b.salePrice)
+  renderFilteredProducts(filteredArray);
+ 
+})
+
+
+
+
+
+
+
+
+
+
+
+
+var check = document.querySelectorAll(".checked");
+
+check.forEach((element,index )=> {
+  
+  let min_price 
+  let max_price  
+ element.addEventListener("click",()=>{
+
+
+ if(index ===0)
+ {
+   min_price  = 0
+   max_price = 25
+ }
+ else if(index ===1 )
+ {
+  min_price = 25;
+  max_price= 50
+ }
+ else if( index === 2)
+ {
+  min_price = 50;
+  max_price = 75;
+ }
+ else if(index === 3){
+  min_price = 75
+  max_price = 100
+ }
+ else if (index === 4 ){
+  min_price = 100
+  max_price = 150
+ }
+ else if(index === 5){
+  min_price = 150
+  max_price = 200
+}
+  
+  if(element.checked ){
+    console.log(element.checked)
+
+    const filteredArray = array.filter((item) => {
+      if (item.salePrice >min_price && item.salePrice <max_price ) {
+        return item
+      }
+    }).sort((a,b)=>a.salePrice - b.salePrice)
+
+    console.log(array)
+    renderFilteredProducts(filteredArray);
+   }
+   else{
+    renderProducts()
+   }
+ })
+ 
+});
