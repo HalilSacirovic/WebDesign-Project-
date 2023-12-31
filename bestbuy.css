@@ -539,6 +539,12 @@ PRODUCTS SECTION STYLE
 }
 
 
+.offcanvas,
+.test {
+  width: 300px !important;
+
+}
+
 .features-stars {
   text-align: center;
   padding-top: 15px;
@@ -672,4 +678,10 @@ td {
 .offcanvas-body a:hover {
 
   color: #00a1e7;
+}
+
+
+.btn {
+  color: #0086d4 !important;
+  background-color: white !important;
 }

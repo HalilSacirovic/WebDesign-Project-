@@ -385,13 +385,22 @@ document
     const min = document.getElementById("min").value;
     const max = document.getElementById("max").value;
 
+
+    if(min === "" && max === "")
+    {
+      return
+    }
+    else{
+
     const filteredArray = array.filter((item) => {
+      
       if (item.salePrice >= min && item.salePrice <= max) {
         return item;
       }
     });
     renderFilteredProducts(filteredArray);
-  });
+  }
+  })
 
 document.getElementById("name-search").addEventListener("click", function () {
   const search_value = document
