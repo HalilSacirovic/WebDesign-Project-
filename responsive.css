@@ -316,4 +316,13 @@
         padding: 5px 0;
     }
 
+    .product {
+        height: auto !important;
+    }
+
+    .details {
+        height: auto !important;
+        padding-bottom: 20px;
+    }
+
 }
