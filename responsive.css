@@ -302,3 +302,18 @@
     }
 
 }
+
+
+@media (max-width:500px) {
+    .prod-lg-img img {
+        height: 220px !important;
+    }
+
+    .prod-add-to-cart button {
+
+        margin-top: 15px;
+        width: 90%;
+        padding: 5px 0;
+    }
+
+}
