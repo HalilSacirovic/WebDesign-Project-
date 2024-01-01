@@ -178,3 +178,10 @@ for(var i=0;i<table.rows.length;i++)
 }
 
 
+
+window.addEventListener("load",()=>{
+  if(window.innerWidth<600)
+  {
+   document.getElementById("search").placeholder = "Search for product"
+  }
+ })
