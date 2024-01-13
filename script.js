@@ -558,3 +558,4 @@ window.addEventListener("load",()=>{
   document.getElementById("search").placeholder = "Search for product"
  }
 })
+
