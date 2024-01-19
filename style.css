@@ -13,11 +13,13 @@
   color: white;
   padding-left: 30px;
 }
+
 .register-section {
   height: 95vh;
   background-color: #f8f9fb;
   padding-top: 100px;
 }
+
 .create-account h1 {
   color: blue;
   font-size: 45px;
@@ -125,4 +127,82 @@
 
 #arrow-icon {
   font-size: 26px;
+}
+
+
+
+.login {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fb;
+}
+
+
+.login .login-panel {
+  border: 3px solid blue;
+  background-color: white;
+  height: 400px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.login-panel input {
+  width: 300px;
+  line-height: 45px;
+  outline: none;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  padding-left: 5px;
+  border: 1px solid hwb(0 81% 19%);
+  font-size: 18px;
+  font-style: italic;
+  border-radius: 3px;
+  transition: ease-in-out all 2;
+}
+
+.login-panel input:focus {
+  border: 1px solid rgb(145, 143, 143);
+}
+
+.login-panel label {
+  /* color: rgb(108, 103, 103); */
+  color: blue;
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+
+#loginbutton {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 14px;
+  outline: none;
+  padding: 8px 30px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(255, 185, 54);
+  border: none;
+  border-radius: 3px;
+  transition: ease-in-out 0.45s;
+}
+
+#loginbutton:hover {
+  transform: translateY(-3px);
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#loginbutton:active {
+  transform: translateY(-1.5px);
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.45);
 }

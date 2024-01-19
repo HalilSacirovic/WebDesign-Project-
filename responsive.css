@@ -41,6 +41,17 @@
         width: 380px !important;
     }
 
+    .small-device {
+        display: flex !important;
+        align-items: center;
+        justify-content: end;
+        height: 100%;
+    }
+
+    .cart {
+        display: none !important;
+    }
+
 
 
 
@@ -61,16 +72,9 @@
         width: 350px;
     }
 
-    .cart {
-        display: none !important;
-    }
 
-    .small-device {
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        height: 100%;
-    }
+
+
 
 }
 

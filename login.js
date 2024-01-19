@@ -12,19 +12,11 @@ const loginbtn = document.getElementById("loginbutton");
 // console.log(username.value + " " + password.value);
 
 
-// const data = {
-//   email: ucitaniKorisnik.demail,
-//   password: ucitaniKorisnik.dpassword,
-// };
 
-// console.log(data);
+
+
 loginbtn.addEventListener("click", () => {
-  // console.log("input values => ", username.value + " " + password.value);
-  // console.log(
-  //   "ucitani korisnik =>",
-  //   ucitaniKorisnik.demail + " " + ucitaniKorisnik.dpassword
-  // );
-
+  
 //   console.log(username.value.length, "  username duzina ");
 // console.log("password duzina " , password.value.length);
 
@@ -47,17 +39,29 @@ loginbtn.addEventListener("click", () => {
 
 
 
+  
+
+
   const baseUrl = "http://softinz20233-001-site1.gtempurl.com/api/users";
   
-  
+  // const shaObj = new jsSHA("SHA-256", "TEXT");
+
+  // // Hash the password
+  // shaObj.update(password.value);
+  // const hashedPassword = shaObj.getHash("HEX");
+
+  // console.log(hashedPassword)
+
   fetch(baseUrl)
   .then((res)=>{
     return res.json()
   })
   .then((data)=>{
     console.log(data);
-    console.log(data.username,data.password)
+    
+    
     for(var i=0;i<data.length;i++)
+    // console.log(data[i].username,data[i].password)
     {
       if(data[i].username === username.value && data[i].password === password.value)
       {
