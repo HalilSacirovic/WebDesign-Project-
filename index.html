@@ -6,7 +6,7 @@
     <title>Bootstrap demo</title>
     <link rel="stylesheet" href="bestbuy.css" />
     <!-- <link rel="stylesheet" href="nav-bar.css" /> -->
-    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="responsive.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -25,16 +25,18 @@
     <div class="nav-bar">
       <div class="container">
         <div class="row">
-          <div class="col-2 col-sm-2 col-md-2  col-lg-2  col-xl-2 col-xxl-2">
+          <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
             <div class="logo">
               <h4>
-                <a href="index.html">  BEST <br />
-                  BUY</a>
+                <a href="index.html">
+                  BEST <br />
+                  BUY</a
+                >
               </h4>
             </div>
           </div>
 
-          <div class="col-8 col-sm-8  col-md-8 col-lg-5  col-xl-6 col-xxl-7">
+          <div class="col-8 col-sm-8 col-md-8 col-lg-5 col-xl-6 col-xxl-7">
             <div class="search-bar">
               <!-- <button>Menu</button> -->
               <div class="input-search">
@@ -50,24 +52,56 @@
             </div>
           </div>
 
-          <div class="col-2 col-sm-2  col-md-2 col-lg-5  col-xl-4 col-xxl-3">
+          <div class="col-2 col-sm-2 col-md-2 col-lg-5 col-xl-4 col-xxl-3">
             <div class="cart">
-              <a href="signup.html" id="cart"><i class="fa-solid fa-user-plus"> </i> Sign Up</a>
-              <a href="login.html" ><i class="fa-solid fa-right-to-bracket"></i> Login</a >
-              <a href="cart.html" id="cart"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+              <a href="signup.html"
+                ><i class="fa-solid fa-user-plus"> </i> Sign Up</a
+              >
+              <a href="login.html"
+                ><i class="fa-solid fa-right-to-bracket"></i> Login</a
+              >
+              <a href="#" id="cart"
+                ><i class="fa-solid fa-cart-shopping"></i> Cart</a
+              >
             </div>
             <div class="small-device">
-              <button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-bars"></i></button>
+              <button
+                class="btn"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"
+              >
+                <i class="fa-solid fa-bars"></i>
+              </button>
 
-              <div class="offcanvas test offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+              <div
+                class="offcanvas test offcanvas-end"
+                tabindex="-1"
+                id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel"
+              >
                 <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasRightLabel">Navigation Menu</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  <h5 class="offcanvas-title" id="offcanvasRightLabel">
+                    Navigation Menu
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
                 </div>
                 <div class="offcanvas-body">
-                  <a href="signup.html" id="cart"><i class="fa-solid fa-user-plus"> </i> Sign Up</a>
-                  <a href="login.html" ><i class="fa-solid fa-right-to-bracket"></i> Login</a >
-                <a href="cart.html" id="cart"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+                  <a href="signup.html" id="cart"
+                    ><i class="fa-solid fa-user-plus"> </i> Sign Up</a
+                  >
+                  <a href="login.html"
+                    ><i class="fa-solid fa-right-to-bracket"></i> Login</a
+                  >
+                  <a href="cart.html" id="cart"
+                    ><i class="fa-solid fa-cart-shopping"></i> Cart</a
+                  >
                 </div>
               </div>
             </div>
@@ -93,14 +127,14 @@
                   <label for="">to</label>
                   <input type="number" placeholder="max" id="max" />
                   <div class="nekidiv">
-                  <button id="filter-min-max" class="custom-btn">Show</button>
+                    <button id="filter-min-max" class="custom-btn">Show</button>
+                  </div>
                 </div>
-              </div>
 
                 <div class="check-in-price">
                   <ul class="un-order-list">
                     <li>
-                      <input type="checkbox" class="checked" id="price1"  />
+                      <input type="checkbox" class="checked" id="price1" />
                       <a href="#">less than $25</a>
                     </li>
                     <li>
@@ -123,8 +157,6 @@
                       <input type="checkbox" class="checked" id="price6" />
                       <a href="#">$150-199.99</a>
                     </li>
-                   
-                 
                   </ul>
                 </div>
 
@@ -138,11 +170,14 @@
                       id="input-search-brand"
                     />
                     <div class="nekidiv2">
-                      <button id="name-search" class="custom-btn">Search</button>
-                    <button id="clear-search" class="custom-btn">Clear</button>
+                      <button id="name-search" class="custom-btn">
+                        Search
+                      </button>
+                      <button id="clear-search" class="custom-btn">
+                        Clear
+                      </button>
                     </div>
                   </div>
-                  
                 </div>
               </div>
             </div>
@@ -155,18 +190,26 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="number-items">
-                      <p id="number-items" style="font-weight: bold;"></p>
+                      <p id="number-items" style="font-weight: bold"></p>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="sort-by-input">
                       <p>Sort by:</p>
                       <select name="sortby" id="sortby">
-                        <option value="feature" disabled selected>Featured</option>
+                        <option value="feature" disabled selected>
+                          Featured
+                        </option>
                         <!-- <option value="bestselling" id="bestselling">Best selling</option> -->
-                        <option value="pricelh" id="pricelh">Price Low to High</option>
-                        <option value="pricehl" id="pricehl">Price High to Low</option>
-                        <option value="rating" id="rating">Customer rating</option>
+                        <option value="pricelh" id="pricelh">
+                          Price Low to High
+                        </option>
+                        <option value="pricehl" id="pricehl">
+                          Price High to Low
+                        </option>
+                        <option value="rating" id="rating">
+                          Customer rating
+                        </option>
                         <option value="brandaz" id="nameaz">Brand A-Z</option>
                         <option value="brandza" id="nameza">Brand Z-A</option>
                         <!-- <option value="discount" id="Discount">Best Discount</option> -->
@@ -178,50 +221,28 @@
 
               <div class="list-products">
                 <div class="list-products-item">
-                  <div class="product-img">
-                 
-                  </div>
+                  <div class="product-img"></div>
                   <div class="product-description">
                     <div class="product-description-name">
-                      
-                      <div class="product-description-model">
-                       
-                      </div>
+                      <div class="product-description-model"></div>
                     </div>
-                    <div class="product-description-pickup">
-                     
-                    </div>
+                    <div class="product-description-pickup"></div>
                   </div>
 
                   <div class="product-price">
                     <div class="price-tag">
-                      <div class="price-tag-full">
-                       
-                      </div>
-                      <div class="price-tag-save">
-                        
-                      </div>
+                      <div class="price-tag-full"></div>
+                      <div class="price-tag-save"></div>
                     </div>
-                    <div class="add-to-cart">
-                      
-                    </div>
+                    <div class="add-to-cart"></div>
                   </div>
                 </div>
-
-
-        
-
-
-
               </div>
-           
-           
             </div>
           </div>
         </div>
       </div>
     </div>
-
 
     <script src="script.js"></script>
     <script
