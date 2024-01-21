@@ -15,8 +15,8 @@ if (cartarray.length === 0) {
   zero_products.style = "display:block";
 }
 
-const renderProducts = () => {
-  // document.getElementById("number-items").textContent = `Total:${array2.total}.`;
+const renderProductsCart = () => {
+
   const listproducts = document.querySelector(".list-products");
   listproducts.innerHTML = "";
   cartarray.forEach((item, index) => {
@@ -168,4 +168,4 @@ const renderProducts = () => {
   });
 };
 
-renderProducts();
+renderProductsCart();

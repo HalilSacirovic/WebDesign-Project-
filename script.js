@@ -12,7 +12,6 @@ const getProducts = () => {
       console.log(data.products);
 
       array = data.products;
-      array2 = data;
       renderProducts();
     })
     .catch((error) => {
@@ -22,10 +21,11 @@ const getProducts = () => {
 
 // RENDER PRODUCT FUNCTION HERE
 
+
 const renderProducts = () => {
   document.getElementById(
     "number-items"
-  ).textContent = `Total:${array2.total}.`;
+  ).textContent = `Total:${array.length}.`;
   const listproducts = document.querySelector(".list-products");
   listproducts.innerHTML = "";
   array.forEach((item, index) => {
@@ -134,8 +134,9 @@ const renderProducts = () => {
       }
     }
 
-    if (user) {
+    
       a_add_to_cart.addEventListener("click", function () {
+        if (user) {
         if (!cart.some((existingItem) => existingItem.sku === item.sku)) {
           a_add_to_cart.style.background = "rgb(255, 115, 0)";
           a_add_to_cart.textContent = "Added in a cart";
@@ -147,8 +148,12 @@ const renderProducts = () => {
         } else {
           console.log("Item is already in the cart");
         }
+      }
+      else{
+        alert("Niste ulogovani")
+      }
       });
-    }
+    
     // console.log(renderedCart.includes(item));
 
     // //////////////////////////////////////////////////////////
@@ -358,6 +363,8 @@ const renderFilteredProducts = (filteredArray) => {
 const sortBy = () => {
   const select_sort = document.getElementById("sortby");
 
+console.log(select_sort)
+
   select_sort.addEventListener("change", function () {
     for (var i = 0; i < select_sort.length; i++) {
       if (select_sort.value === "pricelh") {
@@ -432,17 +439,8 @@ document.getElementById("clear-search").addEventListener("click", function () {
   renderFilteredProducts(array);
 });
 
-document.getElementById("cart").addEventListener("click", () => {
-  // localStorage.setItem("cartarray", JSON.stringify(cart));
-  window.location.href = "cart.html";
 
-  let storedProduct = localStorage.getItem("cartarray");
-  var renderedProduct = JSON.parse(storedProduct);
 
-  console.log(cart);
-  // console.log('stored product =>',storedProduct)
-  console.log("rendered products =>", renderedProduct);
-});
 
 // console.log(cart)
 
@@ -546,3 +544,38 @@ window.addEventListener("load", () => {
     document.getElementById("search").placeholder = "Search for product";
   }
 });
+
+
+const login = document.getElementById("login")
+
+const user = localStorage.getItem("user");
+const cartbtn =document.getElementById("cart") 
+
+
+if(user){
+  login.textContent = "Logout"
+  login.addEventListener("click",function()
+  {
+    localStorage.removeItem("user");
+    login.href = "index.html"
+  })
+
+  cartbtn.addEventListener("click", () => {
+    // localStorage.setItem("cartarray", JSON.stringify(cart));
+    window.location.href = "cart.html";
+  
+    let storedProduct = localStorage.getItem("cartarray");
+    var renderedProduct = JSON.parse(storedProduct);
+  
+    console.log(cart);
+    // console.log('stored product =>',storedProduct)
+    console.log("rendered products =>", renderedProduct);
+  });
+}
+else{
+  login.href = "login.html"
+  cartbtn.addEventListener("click",()=>{
+    window.location.href = "#"
+  })
+}
+
