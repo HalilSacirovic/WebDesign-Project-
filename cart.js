@@ -104,7 +104,6 @@ const renderProducts = () => {
     if (storedCart) {
       cart = JSON.parse(storedCart);
     }
-    // Pronađite indeks item-a koji želite ukloniti
 
     a_add_to_cart.addEventListener("click", function () {
       console.log("aa");
@@ -112,7 +111,6 @@ const renderProducts = () => {
         (cartItem) => cartItem.sku === item.sku
       );
 
-      // Ako je pronađen, uklonite ga iz niza
       if (indexToRemove !== -1) {
         cart.splice(indexToRemove, 1);
         localStorage.setItem("cartarray", JSON.stringify(cart));

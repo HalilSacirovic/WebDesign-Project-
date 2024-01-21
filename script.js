@@ -120,32 +120,35 @@ const renderProducts = () => {
       cart = renderedCart;
     }
     // console.log(localStorage.length === 0);
+    const user = localStorage.getItem("user");
+    if (user) {
+      if (localStorage.length !== 0) {
+        for (var i = 0; i < renderedCart.length; i++) {
+          if (renderedCart[i].sku === item.sku) {
+            a_add_to_cart.style.background = "rgb(255, 115, 0)";
 
-    if (localStorage.length !== 0) {
-      for (var i = 0; i < renderedCart.length; i++) {
-        if (renderedCart[i].sku === item.sku) {
-          a_add_to_cart.style.background = "rgb(255, 115, 0)";
-
-          a_add_to_cart.disabled = true;
-          console.log("JESTE");
+            a_add_to_cart.disabled = true;
+            console.log("JESTE");
+          }
         }
       }
     }
 
-    a_add_to_cart.addEventListener("click", function () {
-      if (!cart.some((existingItem) => existingItem.sku === item.sku)) {
-        a_add_to_cart.style.background = "rgb(255, 115, 0)";
-        a_add_to_cart.textContent = "Added in a cart";
+    if (user) {
+      a_add_to_cart.addEventListener("click", function () {
+        if (!cart.some((existingItem) => existingItem.sku === item.sku)) {
+          a_add_to_cart.style.background = "rgb(255, 115, 0)";
+          a_add_to_cart.textContent = "Added in a cart";
 
-        cart.push(item);
-        localStorage.setItem("cartarray", JSON.stringify(cart));
+          cart.push(item);
+          localStorage.setItem("cartarray", JSON.stringify(cart));
 
-        alert("Successfully added in Cart");
-      } else {
-        console.log("Item is already in the cart");
-      }
-    });
-
+          alert("Successfully added in Cart");
+        } else {
+          console.log("Item is already in the cart");
+        }
+      });
+    }
     // console.log(renderedCart.includes(item));
 
     // //////////////////////////////////////////////////////////
