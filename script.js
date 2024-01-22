@@ -586,32 +586,32 @@ const user = localStorage.getItem("user");
 const cartbtn =document.getElementById("cart") 
 
 
-if(user){
-  login.textContent = "Logout"
-  login.addEventListener("click",function()
-  {
-    localStorage.removeItem("user");
-    login.href = "index.html"
-  })
+// if(user){
+//   login.textContent = "Logout"
+//   login.addEventListener("click",function()
+//   {
+//     localStorage.removeItem("user");
+//     login.href = "index.html"
+//   })
 
-  cartbtn.addEventListener("click", () => {
-    // localStorage.setItem("cartarray", JSON.stringify(cart));
-    window.location.href = "cart.html";
+//   cartbtn.addEventListener("click", () => {
+//     // localStorage.setItem("cartarray", JSON.stringify(cart));
+//     window.location.href = "cart.html";
   
-    let storedProduct = localStorage.getItem("cartarray");
-    var renderedProduct = JSON.parse(storedProduct);
+//     let storedProduct = localStorage.getItem("cartarray");
+//     var renderedProduct = JSON.parse(storedProduct);
   
-    console.log(cart);
-    // console.log('stored product =>',storedProduct)
-    console.log("rendered products =>", renderedProduct);
-  });
-}
-else{
-  login.href = "login.html"
-  cartbtn.addEventListener("click",()=>{
-    window.location.href = "#"
-  })
-}
+//     console.log(cart);
+//     // console.log('stored product =>',storedProduct)
+//     console.log("rendered products =>", renderedProduct);
+//   });
+// }
+// else{
+//   login.href = "login.html"
+//   cartbtn.addEventListener("click",()=>{
+//     window.location.href = "#"
+//   })
+// }
 
 
 

@@ -48,9 +48,10 @@ loginbtn.addEventListener("click", () => {
       return res.json();
     })
     .then((data) => {
-      // console.log(data);
+      console.log(data);
 
-      // console.log(data[0].username,data[0].password)
+      console.log(data[0].username,data[0].password)
+      console.log(username.value,password.value)
 
       for (
         var i = 0;
