@@ -715,3 +715,113 @@ td {
   color: #0086d4 !important;
   background-color: white !important;
 }
+
+
+.contact-me {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(to bottom right, rgba(225, 236, 237, 0.301), white);
+}
+
+.contact-me label {
+  color: #0086d4;
+}
+
+.contact-me input:focus {
+  border: 3px solid #0086d4;
+}
+
+.contact-me input::placeholder {
+  font-size: 13px;
+}
+
+.contact-me input {
+  width: 100%;
+  line-height: 35px;
+  border-radius: 5px;
+  border: 1px solid #0086d4;
+  outline: none;
+  transition: all 0.1s ease-out;
+  padding-left: 10px;
+}
+
+.contact-me textarea {
+  outline: none;
+  width: 100%;
+  transition: all 0.1s ease-out;
+  padding-left: 10px;
+  border: 1px solid #0086d4;
+}
+
+.contact-me textarea:focus {
+  border: 3px solid #0086d4;
+}
+
+#submitbutton {
+  width: 10%;
+  border: 1px solid #0086d4;
+  background-color: white;
+  color: #0086d4;
+  border-radius: 5px;
+  padding: 10px;
+  transition: all 0.4s ease-in-out
+}
+
+#submitbutton:hover {
+  transform: translateY(-5px);
+  background-color: #0086d4;
+  color: white;
+
+}
+
+.contact-me form {
+  border: 3px solid #0086d4;
+  background-image: linear-gradient(to top, rgba(212, 238, 240, 0.301), white);
+  ;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+
+.about-me {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutme-text {
+  padding-bottom: 50px;
+}
+
+.aboutme-text h5 {
+  color: #0086d4;
+}
+
+.aboutme-text h2 {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.about-me-img {
+  position: relative;
+}
+
+.about-me-img #about-me-img {
+  position: relative;
+  border-radius: 15px;
+}
+
+.about-me-img #about-me-front {
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  background-color: white;
+  border-radius: 50%;
+
+  animation: rotate 8s linear infinite;
+}
