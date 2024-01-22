@@ -1,17 +1,16 @@
-const { default: jsSHA } = require("jssha");
+import bcrypt from "bcrypt";
+// The limited variant files are also exported (sha1, sha256, sha512, and sha3) but do not have TypeScript declarations
 
-const hash = (text) =>
-{
-    const hashObj = new jsSHA("SHA-512","TEXT",{numRounds: 1});
-    hashObj.update(text);
-    const hash = hashObj.getHash("HEX");
-    return hash;
-}
+
 
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 const loginbtn = document.getElementById("loginbutton");
 
+const hash = bcrypt.hash(password,10)
+
+
+console.log(hash)
 // Dohvat JSON stringa iz localStorage i pretvaranje u objekt
 
 // var storedData = localStorage.getItem("data");
