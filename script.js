@@ -25,7 +25,7 @@ const getProducts = () => {
 const renderProducts = () => {
   document.getElementById(
     "number-items"
-  ).textContent = `Total:${array.length}.`;
+  ).textContent = `Total products: ${array.length}`;
   const listproducts = document.querySelector(".list-products");
   listproducts.innerHTML = "";
   array.forEach((item, index) => {
@@ -298,15 +298,50 @@ const renderFilteredProducts = (filteredArray) => {
 
     // ///////////////////////////////////////////////////////
 
-    a_add_to_cart.addEventListener("click", function () {
-      if (!cart.includes(item)) {
-        cart.push(item);
-        alert("Succesfully added in Cart");
-      } else {
-        console.log("item je vec u korpi");
+    let storedCart = localStorage.getItem("cartarray");
+    var renderedCart = JSON.parse(storedCart) || [];
+    console.log(renderedCart);
+    // console.log(renderedCart.length);
+
+    if (storedCart) {
+      cart = renderedCart;
+    }
+    // console.log(localStorage.length === 0);
+    const user = localStorage.getItem("user");
+    if (user) {
+      if (localStorage.length !== 0) {
+        for (var i = 0; i < renderedCart.length; i++) {
+          if (renderedCart[i].sku === item.sku) {
+            a_add_to_cart.style.background = "rgb(255, 115, 0)";
+
+            a_add_to_cart.disabled = true;
+            console.log("JESTE");
+          }
+        }
       }
-      console.log(cart);
-    });
+    }
+
+    
+      a_add_to_cart.addEventListener("click", function () {
+        if (user) {
+        if (!cart.some((existingItem) => existingItem.sku === item.sku)) {
+          a_add_to_cart.style.background = "rgb(255, 115, 0)";
+          a_add_to_cart.textContent = "Added in a cart";
+
+          cart.push(item);
+          localStorage.setItem("cartarray", JSON.stringify(cart));
+
+          alert("Successfully added in Cart");
+        } else {
+          console.log("Item is already in the cart");
+        }
+      }
+      else{
+        alert("Niste ulogovani")
+      }
+      });
+    
+    // console.log(renderedCart.includes(item));
 
     // //////////////////////////////////////////////////////////
 
@@ -356,8 +391,7 @@ const renderFilteredProducts = (filteredArray) => {
     list_products_item.appendChild(product_description);
     list_products_item.appendChild(product_price);
 
-    listproducts.appendChild(list_products_item);
-  });
+    listproducts.appendChild(list_products_item);});
 };
 
 const sortBy = () => {
