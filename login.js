@@ -30,7 +30,7 @@ loginbtn.addEventListener("click", () => {
   //   window.location.href = "index.html";
   // }
 
-  const baseUrl = "http://softinz20233-001-site1.gtempurl.com/api/users";
+  // const baseUrl = "http://softinz20233-001-site1.gtempurl.com/api/users";
 
   // const shaObj = new jsSHA("SHA-256", "TEXT");
 
@@ -40,7 +40,9 @@ loginbtn.addEventListener("click", () => {
 
   // console.log(hashedPassword)
 
-  fetch(baseUrl)
+
+
+  fetch("data.json")
     .then((res) => {
       return res.json();
     })
@@ -57,7 +59,7 @@ loginbtn.addEventListener("click", () => {
           data[i].password === password.value
         ) {
           localStorage.setItem("user", data[i].username);
-          window.location.href = "index.html";
+          // window.location.href = "index.html";
           // console.log(data)
         }
       }
