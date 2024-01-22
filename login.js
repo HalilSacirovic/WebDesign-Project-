@@ -1,3 +1,12 @@
+const { default: jsSHA } = require("jssha");
+
+const hash = (text) =>
+{
+    const hashObj = new jsSHA("SHA-512","TEXT",{numRounds: 1});
+    hashObj.update(text);
+    const hash = hashObj.getHash("HEX");
+    return hash;
+}
 
 const username = document.getElementById("username");
 const password = document.getElementById("password");
@@ -41,6 +50,7 @@ loginbtn.addEventListener("click", () => {
 
   // console.log(hashedPassword)
 
+  
 
 
   fetch("data.json")
@@ -49,10 +59,21 @@ loginbtn.addEventListener("click", () => {
     })
     .then((data) => {
       console.log(data);
+      hash(password.value)
+
+      console.log(hash(password.value),"hashpass")
+      console.log(password.value,"password");
 
       console.log(data[0].username,data[0].password)
       console.log(username.value,password.value)
 
+      const hashObj = new jsSHA("SHA-512","TEXT",{numRounds: 1});
+        hashObj.update(password);
+        const hash = hashObj.getHash("HEX");
+        console.log(hashObj,"HASHOBJ")
+        console.log(hash,"HASH")
+
+        
       for (
         var i = 0;
         i < data.length;
@@ -63,7 +84,7 @@ loginbtn.addEventListener("click", () => {
           data[i].password === password.value
         ) {
           localStorage.setItem("user", data[i].username);
-          window.location.href = "index.html";
+          // window.location.href = "index.html";
           
           console.log("radi? ")
         }
