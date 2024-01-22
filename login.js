@@ -47,7 +47,9 @@ loginbtn.addEventListener("click", () => {
       return res.json();
     })
     .then((data) => {
-      console.log(data);
+      // console.log(data);
+
+      // console.log(data[0].username,data[0].password)
 
       for (
         var i = 0;
@@ -59,8 +61,9 @@ loginbtn.addEventListener("click", () => {
           data[i].password === password.value
         ) {
           localStorage.setItem("user", data[i].username);
-          // window.location.href = "index.html";
-          // console.log(data)
+          window.location.href = "index.html";
+          
+          console.log("radi? ")
         }
       }
     });
