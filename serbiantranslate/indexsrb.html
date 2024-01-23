@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="bestbuy.css" />
+    <link rel="stylesheet" href="../bestbuy.css" />
     <!-- <link rel="stylesheet" href="nav-bar.css" /> -->
-    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="../responsive.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -22,14 +22,13 @@
     />
   </head>
   <body>
-    <a href="./serbiantranslate/indexsrb.html"></a>
     <div class="nav-bar">
       <div class="container">
         <div class="row">
           <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-1 col-xxl-2">
             <div class="logo">
               <h4>
-                <a href="index.html">
+                <a href="../index.html">
                   BEST <br />
                   BUY</a
                 >
@@ -55,17 +54,17 @@
 
           <div class="col-2 col-sm-2 col-md-2 col-lg-5 col-xl-5 col-xxl-4">
             <div class="cart">
-              <a href="signup.html"
-                ><i class="fa-solid fa-user-plus"> </i> Sign Up</a
+              <a href="../signup.html"
+                ><i class="fa-solid fa-user-plus"> </i> Prijavi se</a
               >
               <a href="#" id="login" class="login"
-                ><i class="fa-solid fa-right-to-bracket"></i> Login</a
+                ><i class="fa-solid fa-right-to-bracket"></i> Loginuj se</a
               >
-              <a href="cart.html" id="cart" class="cartbtn"
-                ><i class="fa-solid fa-cart-shopping"></i> Cart</a
+              <a href="../cart.html" id="cart" class="cartbtn"
+                ><i class="fa-solid fa-cart-shopping"></i> Kartica</a
               >
-              <a href="contact.html" 
-              ><i class="fa-regular fa-address-book"></i>Contact</a
+              <a href="../contact.html" 
+              ><i class="fa-regular fa-address-book"></i>Kontaktiraj</a
             >
             </div>
             <div class="small-device">
@@ -87,7 +86,7 @@
               >
                 <div class="offcanvas-header">
                   <h5 class="offcanvas-title" id="offcanvasRightLabel">
-                    Navigation Menu
+                    Navigacioni meni
                   </h5>
                   <button
                     type="button"
@@ -97,17 +96,17 @@
                   ></button>
                 </div>
                 <div class="offcanvas-body">
-                  <a href="signup.html"
-                  ><i class="fa-solid fa-user-plus"> </i> Sign Up</a
+                  <a href="../signup.html"
+                  ><i class="fa-solid fa-user-plus"> </i> Prijavi se </a
                 >
                 <a href="#" id="login" class="login"
-                  ><i class="fa-solid fa-right-to-bracket"></i> Login</a
+                  ><i class="fa-solid fa-right-to-bracket"></i> Loginuj se</a
                 >
-                <a href="cart.html" id="cart"
-                  ><i class="fa-solid fa-cart-shopping"></i> Cart</a
+                <a href="../cart.html" id="cart"
+                  ><i class="fa-solid fa-cart-shopping"></i> Kartica</a
                 >
-                <a href="contact.html" 
-                ><i class="fa-regular fa-address-book"></i>Contact</a
+                <a href="../contact.html" 
+                ><i class="fa-regular fa-address-book"></i>Kontaktiraj</a
               >
                 </div>
               </div>
@@ -128,13 +127,13 @@
             <!-- FILTERS BY THE PRICE -->
             <div class="filters">
               <div class="sort-price">
-                <h5>Price</h5>
+                <h5>Cena</h5>
                 <div class="min-max-price">
                   <input type="number" placeholder="min" id="min" />
-                  <label for="">to</label>
+                  <label for="">do</label>
                   <input type="number" placeholder="max" id="max" />
                   <div class="nekidiv">
-                    <button id="filter-min-max" class="custom-btn">Show</button>
+                    <button id="filter-min-max" class="custom-btn">Prikazi</button>
                   </div>
                 </div>
 
@@ -142,7 +141,7 @@
                   <ul class="un-order-list">
                     <li>
                       <input type="checkbox" class="checked" id="price1" />
-                      <a href="#">less than $25</a>
+                      <a href="#">manje od $25</a>
                     </li>
                     <li>
                       <input type="checkbox" class="checked" id="price2" />
@@ -168,7 +167,7 @@
                 </div>
 
                 <div class="brand">
-                  <h5>Brand</h5>
+                  <h5>Brend</h5>
                   <div class="search-brand">
                     <input
                       type="text"
@@ -178,10 +177,10 @@
                     />
                     <div class="nekidiv2">
                       <button id="name-search" class="custom-btn">
-                        Search
+                        Pretrazi
                       </button>
                       <button id="clear-search" class="custom-btn">
-                        Clear
+                        Ocisti
                       </button>
                     </div>
                   </div>
@@ -202,23 +201,23 @@
                   </div>
                   <div class="col-md-6">
                     <div class="sort-by-input">
-                      <p>Sort by:</p>
+                      <p>Sortiraj po:</p>
                       <select name="sortby" id="sortby">
                         <option value="feature" disabled selected>
-                          Featured
+                          Izaberi
                         </option>
                         <!-- <option value="bestselling" id="bestselling">Best selling</option> -->
                         <option value="pricelh" id="pricelh">
-                          Price Low to High
+                         Cena od nize ka vise
                         </option>
                         <option value="pricehl" id="pricehl">
-                          Price High to Low
+                          Cena od vise ka nize
                         </option>
                         <option value="rating" id="rating">
-                          Customer rating
+                          Ocena kupaca
                         </option>
-                        <option value="brandaz" id="nameaz">Brand A-Z</option>
-                        <option value="brandza" id="nameza">Brand Z-A</option>
+                        <option value="brandaz" id="nameaz">Po nazivu A-Z</option>
+                        <option value="brandza" id="nameza">Po nazivu Z-A</option>
                         <!-- <option value="discount" id="Discount">Best Discount</option> -->
                       </select>
                     </div>
@@ -251,7 +250,7 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
