@@ -22,7 +22,6 @@
     />
   </head>
   <body>
-    <a href="./serbiantranslate/indexsrb.html"></a>
     <div class="nav-bar">
       <div class="container">
         <div class="row">
@@ -120,6 +119,8 @@
     <!-- END OF NAV BAR SECTION -->
 
     <!-- SECTION PRODUCTS  -->
+
+    <div id="google_translate_element"></div>
 
     <div class="section-products">
       <div class="container-fluid">
@@ -252,6 +253,16 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateInit"></script>
+
+        <script>
+            function googleTranslateInit() {
+                new google.translate.TranslateElement(
+                    { pageLanguage: "en" },
+                    "google_translate_element"
+                );
+            }
+        </script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

@@ -825,3 +825,40 @@ td {
 
   animation: rotate 8s linear infinite;
 }
+
+
+#google_translate_element {
+  text-align: right;
+  margin-right: 85px;
+}
+
+.goog-logo-link {
+  display: none !important;
+}
+
+.goog-te-gadget {
+  color: transparent !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+  color: #0086d4 !important;
+}
+
+#google_translate_element {
+  color: transparent;
+}
+
+#google_translate_element a {
+  display: none;
+}
+
+.VIpgJd-ZVi9od-ORHb {
+  height: 1px;
+}
+
+.goog-te-gadget .goog-te-combo {
+  padding: 5px;
+  font-size: 18px;
+  outline: none;
+  border-radius: 5px;
+}

@@ -637,4 +637,5 @@ else{
   loginclass[1].href = "login.html"
 }
 
-
+// 
+// document.querySelector(".skiptranslate .goog-te-gadget").textContent = none
