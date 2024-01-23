@@ -1,10 +1,12 @@
-
-
+import {hash} from "./hashovanje/"
 
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 const loginbtn = document.getElementById("loginbutton");
 
+const hashpass = hash(password.value)
+
+console.log(hashpass)
 // const hash = bcrypt.hash(password,10)
 
 
