@@ -1,5 +1,4 @@
-let jsSHA = require("jssha")
-
+import jsSHA from "jssha";
 export const hash = (text) =>
 {
     const hashObj = new jsSHA("SHA-512","TEXT",{numRounds: 1});

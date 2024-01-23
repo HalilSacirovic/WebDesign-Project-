@@ -179,14 +179,38 @@ const user = localStorage.getItem("user");
 const cartbtn =document.getElementById("cart") 
 
 
+// if(user){
+//   login.textContent = "Logout"
+//   login.addEventListener("click",function()
+//   {
+//     localStorage.removeItem("user");
+//     login.href = "index.html"
+//   })
+// }
+// else{
+//   login.href = "login.html"
+// }
+
+const loginclass = document.querySelectorAll(".login");
+
+console.log(loginclass)
+
+
 if(user){
-  login.textContent = "Logout"
-  login.addEventListener("click",function()
+  for(let i=0;i<loginclass.length;i++){
+  loginclass[i].textContent = "Logout"
+  loginclass[i].addEventListener("click",function()
   {
     localStorage.removeItem("user");
-    login.href = "index.html"
+    loginclass[i].href = "index.html"
   })
 }
-else{
-  login.href = "login.html"
 }
+else{
+
+
+  loginclass[0].href = "login.html"
+  loginclass[1].href = "login.html"
+}
+
+
