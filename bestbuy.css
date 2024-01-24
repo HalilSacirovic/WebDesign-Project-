@@ -90,7 +90,7 @@ HERE IS SECTION FOR PRODUTS
 
 .section-products {
   height: 92vh;
-  padding-top: 30px;
+  /* padding-top: 30px; */
   padding-left: 70px;
   padding-right: 70px;
 }
@@ -777,7 +777,7 @@ td {
 
 }
 
-.contact-me form {
+.contact-me .form {
   border: 3px solid #0086d4;
   background-image: linear-gradient(to top, rgba(212, 238, 240, 0.301), white);
   ;
@@ -807,24 +807,7 @@ td {
   font-size: 40px;
 }
 
-.about-me-img {
-  position: relative;
-}
 
-.about-me-img #about-me-img {
-  position: relative;
-  border-radius: 15px;
-}
-
-.about-me-img #about-me-front {
-  position: absolute;
-  bottom: 0%;
-  right: 0%;
-  background-color: white;
-  border-radius: 50%;
-
-  animation: rotate 8s linear infinite;
-}
 
 
 #google_translate_element {
@@ -859,6 +842,8 @@ td {
 .goog-te-gadget .goog-te-combo {
   padding: 5px;
   font-size: 18px;
+  /* margin-top: 10px !important; */
   outline: none;
+  width: 200px;
   border-radius: 5px;
 }

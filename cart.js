@@ -11,7 +11,7 @@ clearCart.addEventListener("click", function () {
 });
 
 const zero_products = document.querySelector(".zero-products");
-if (cartarray.length === 0) {
+if (!cartarray) {
   zero_products.style = "display:block";
 }
 
@@ -19,6 +19,7 @@ const renderProductsCart = () => {
 
   const listproducts = document.querySelector(".list-products");
   listproducts.innerHTML = "";
+  if(cartarray){
   cartarray.forEach((item, index) => {
     const list_products_item = document.createElement("div");
     list_products_item.classList.add("list-products-item");
@@ -166,11 +167,13 @@ const renderProductsCart = () => {
 
     listproducts.appendChild(list_products_item);
   });
-};
+}
+else{
+  console.log("nema sacuvanih")
+}
+}
 
 renderProductsCart();
-
-
 
 
 const login = document.getElementById("login")
@@ -179,17 +182,6 @@ const user = localStorage.getItem("user");
 const cartbtn =document.getElementById("cart") 
 
 
-// if(user){
-//   login.textContent = "Logout"
-//   login.addEventListener("click",function()
-//   {
-//     localStorage.removeItem("user");
-//     login.href = "index.html"
-//   })
-// }
-// else{
-//   login.href = "login.html"
-// }
 
 const loginclass = document.querySelectorAll(".login");
 
@@ -212,5 +204,9 @@ else{
   loginclass[0].href = "login.html"
   loginclass[1].href = "login.html"
 }
+
+
+
+
 
 
