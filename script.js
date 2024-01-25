@@ -21,7 +21,6 @@ const getProducts = () => {
 
 // RENDER PRODUCT FUNCTION HERE
 
-
 const renderProducts = () => {
   document.getElementById(
     "number-items"
@@ -134,9 +133,8 @@ const renderProducts = () => {
       }
     }
 
-    
-      a_add_to_cart.addEventListener("click", function () {
-        if (user) {
+    a_add_to_cart.addEventListener("click", function () {
+      if (user) {
         if (!cart.some((existingItem) => existingItem.sku === item.sku)) {
           a_add_to_cart.style.background = "rgb(255, 115, 0)";
           a_add_to_cart.textContent = "Added in a cart";
@@ -148,12 +146,11 @@ const renderProducts = () => {
         } else {
           console.log("Item is already in the cart");
         }
+      } else {
+        alert("Niste ulogovani");
       }
-      else{
-        alert("Niste ulogovani")
-      }
-      });
-    
+    });
+
     // console.log(renderedCart.includes(item));
 
     // //////////////////////////////////////////////////////////
@@ -321,9 +318,8 @@ const renderFilteredProducts = (filteredArray) => {
       }
     }
 
-    
-      a_add_to_cart.addEventListener("click", function () {
-        if (user) {
+    a_add_to_cart.addEventListener("click", function () {
+      if (user) {
         if (!cart.some((existingItem) => existingItem.sku === item.sku)) {
           a_add_to_cart.style.background = "rgb(255, 115, 0)";
           a_add_to_cart.textContent = "Added in a cart";
@@ -335,12 +331,11 @@ const renderFilteredProducts = (filteredArray) => {
         } else {
           console.log("Item is already in the cart");
         }
+      } else {
+        alert("Niste ulogovani");
       }
-      else{
-        alert("Niste ulogovani")
-      }
-      });
-    
+    });
+
     // console.log(renderedCart.includes(item));
 
     // //////////////////////////////////////////////////////////
@@ -391,13 +386,14 @@ const renderFilteredProducts = (filteredArray) => {
     list_products_item.appendChild(product_description);
     list_products_item.appendChild(product_price);
 
-    listproducts.appendChild(list_products_item);});
+    listproducts.appendChild(list_products_item);
+  });
 };
 
 const sortBy = () => {
   const select_sort = document.getElementById("sortby");
 
-console.log(select_sort)
+  console.log(select_sort);
 
   select_sort.addEventListener("change", function () {
     for (var i = 0; i < select_sort.length; i++) {
@@ -472,9 +468,6 @@ document.getElementById("clear-search").addEventListener("click", function () {
   document.getElementById("input-search-brand").value = "";
   renderFilteredProducts(array);
 });
-
-
-
 
 // console.log(cart)
 
@@ -578,13 +571,11 @@ window.addEventListener("load", () => {
     document.getElementById("search").placeholder = "Search for product";
   }
 });
-
-
-const login = document.getElementById("login")
+const login = document.getElementById("login");
+const contact = document.getElementById("contact");
 
 const user = localStorage.getItem("user");
-const cartbtn =document.getElementById("cart") 
-
+const cartbtn = document.getElementById("cart");
 
 // if(user){
 //   login.textContent = "Logout"
@@ -595,15 +586,8 @@ const cartbtn =document.getElementById("cart")
 //   })
 
 //   cartbtn.addEventListener("click", () => {
-//     // localStorage.setItem("cartarray", JSON.stringify(cart));
 //     window.location.href = "cart.html";
-  
-//     let storedProduct = localStorage.getItem("cartarray");
-//     var renderedProduct = JSON.parse(storedProduct);
-  
-//     console.log(cart);
-//     // console.log('stored product =>',storedProduct)
-//     console.log("rendered products =>", renderedProduct);
+
 //   });
 // }
 // else{
@@ -613,29 +597,35 @@ const cartbtn =document.getElementById("cart")
 //   })
 // }
 
-
-
 const loginclass = document.querySelectorAll(".login");
 
-console.log(loginclass)
+console.log(loginclass);
 
+if (user) {
+  cartbtn.addEventListener("click", () => {
+    window.location.href = "cart.html";
+  });
+  contact.addEventListener("click", () => {
+    window.location.href = "contact.html";
+  });
+  for (let i = 0; i < loginclass.length; i++) {
+    loginclass[i].textContent = "Logout";
+    loginclass[i].addEventListener("click", function () {
+      localStorage.removeItem("user");
+      loginclass[i].href = "index.html";
+    });
+  }
+} else {
+  cartbtn.addEventListener("click", () => {
+    alert("You are not logged so you dont have access to this page");
+  });
+  contact.addEventListener("click", () => {
+    alert("You are not logged so you dont have access to this page");
+  });
 
-if(user){
-  for(let i=0;i<loginclass.length;i++){
-  loginclass[i].textContent = "Logout"
-  loginclass[i].addEventListener("click",function()
-  {
-    localStorage.removeItem("user");
-    loginclass[i].href = "index.html"
-  })
+  loginclass[0].href = "login.html";
+  loginclass[1].href = "login.html";
 }
-}
-else{
 
-
-  loginclass[0].href = "login.html"
-  loginclass[1].href = "login.html"
-}
-
-// 
+//
 // document.querySelector(".skiptranslate .goog-te-gadget").textContent = none
