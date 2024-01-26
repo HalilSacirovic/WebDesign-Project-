@@ -1,5 +1,5 @@
 // import jsSHA from "jssha";
-const jsSHA = require("jssha");
+// const jsSHA = require("jssha");
 
 const username = document.getElementById("username");
 const password = document.getElementById("password");
