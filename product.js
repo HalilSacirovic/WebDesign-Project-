@@ -185,16 +185,16 @@ for (var i = 0; i < table.rows.length; i++) {
   if (table.rows[i].children[1].ariaValueNow === "genre") {
     table.rows[i].children[1].textContent = renderedProduct.genre;
   }
-  if (table.rows[i].children[1].ariaValueNow === "subgenre") {
-    table.rows[i].children[1].textContent = renderedProduct.genre;
+  if (table.rows[i].children[1].ariaValueNow === "actors") {
+    table.rows[i].children[1].textContent = renderedProduct.artistName;
   }
-  if (table.rows[i].children[1].ariaValueNow === "countries") {
-    table.rows[i].children[1].textContent = renderedProduct.genre;
+  if (table.rows[i].children[1].ariaValueNow === "department") {
+    table.rows[i].children[1].textContent = renderedProduct.department;
   }
-  if (table.rows[i].children[1].ariaValueNow === "tags") {
-    table.rows[i].children[1].textContent = renderedProduct.genre;
+  if (table.rows[i].children[1].ariaValueNow === "year") {
+    table.rows[i].children[1].textContent = renderedProduct.releaseDate;
   }
-  if (table.rows[i].children[1].ariaValueNow === "formatt") {
+  if (table.rows[i].children[1].ariaValueNow === "format") {
     table.rows[i].children[1].textContent = renderedProduct.format;
   }
 
@@ -202,14 +202,14 @@ for (var i = 0; i < table.rows.length; i++) {
     table.rows[i].children[1].textContent = renderedProduct.type;
   }
 
-  if (table.rows[i].children[1].ariaValueNow === "region") {
-    table.rows[i].children[1].textContent = renderedProduct.genre;
+  if (table.rows[i].children[1].ariaValueNow === "length") {
+    table.rows[i].children[1].textContent = renderedProduct.lengthInMinutes;
   }
   if (table.rows[i].children[1].ariaValueNow === "studio") {
     table.rows[i].children[1].textContent = renderedProduct.studio;
   }
-  if (table.rows[i].children[1].ariaValueNow === "moods") {
-    table.rows[i].children[1].textContent = renderedProduct.genre;
+  if (table.rows[i].children[1].ariaValueNow === "rating") {
+    table.rows[i].children[1].textContent = renderedProduct.mpaaRating;
   }
 }
 
@@ -218,3 +218,11 @@ window.addEventListener("load", () => {
     document.getElementById("search").placeholder = "Search for product";
   }
 });
+
+if (renderedProduct.longDescription !== null) {
+  document.getElementById("movie_desc").textContent =
+    renderedProduct.longDescription;
+} else {
+  document.getElementById("movie_desc").textContent =
+    "There is no Description about this movie, you can read the plot of the movie clicking on the Features button";
+}
