@@ -11,8 +11,9 @@ clearCart.addEventListener("click", function () {
 });
 
 const zero_products = document.querySelector(".zero-products");
-if (!cartarray) {
-  zero_products.style = "display:block";
+if (!cartarray || cartarray.length === 0) {
+  zero_products.textContent = "You dont have any saved products!";
+  clearCart.style = "display:none;";
 }
 
 const renderProductsCart = () => {
