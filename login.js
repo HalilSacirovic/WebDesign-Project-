@@ -1,8 +1,24 @@
+// import jsSHA from "jssha";
+// let jsSHA = require("jssha");
+
+
+   
+
 
 
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 const loginbtn = document.getElementById("loginbutton");
+
+const hash =(pass)=>{
+const hashObj = new jsSHA("SHA-512","TEXT",{numRounds: 1});
+hashObj.update(pass);
+const hash = hashObj.getHash("HEX");
+
+return hash
+
+}
+
 
 const invalidusername = document.getElementById("labelalertusername")
 const invalidpassword = document.getElementById("labelalertpassword")
@@ -22,7 +38,7 @@ const checkLogin = ()=>{
       ) {
         if (
           data[i].username === username.value &&
-          data[i].password === password.value
+          data[i].password === hash(password.value)
         ) {
           
           localStorage.setItem("user", data[i].username);
@@ -55,6 +71,7 @@ const checkLogin = ()=>{
 
 
 loginbtn.addEventListener("click", () => {
+
 
   checkLogin()
 
