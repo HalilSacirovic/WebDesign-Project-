@@ -3,6 +3,7 @@ const contact = document.getElementById("contact");
 const user = localStorage.getItem("user");
 const cartbtn = document.getElementById("cart");
 
+
 const loginclass = document.querySelectorAll(".login");
 
 console.log(loginclass);
@@ -22,6 +23,7 @@ if (user) {
     });
   }
 } else {
+  window.location.href="index.html"
   cartbtn.addEventListener("click", () => {
     alert("You are not logged so you dont have access to this page");
   });

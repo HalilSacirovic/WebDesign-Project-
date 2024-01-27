@@ -1,7 +1,14 @@
 let storedProduct = localStorage.getItem("cartarray");
 var cartarray = JSON.parse(storedProduct);
+const user = localStorage.getItem("user");
+
+if(!user)
+{
+  window.location.href="index.html"
+}
 
 console.log(cartarray);
+
 
 const clearCart = document.getElementById("clear_cart");
 
@@ -187,7 +194,7 @@ renderProductsCart();
 const login = document.getElementById("login");
 const contact = document.getElementById("contact");
 
-const user = localStorage.getItem("user");
+
 const cartbtn = document.getElementById("cart");
 
 const loginclass = document.querySelectorAll(".login");
