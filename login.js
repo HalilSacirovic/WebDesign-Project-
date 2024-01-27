@@ -16,6 +16,11 @@ const hash = (pass) => {
 const invalidusername = document.getElementById("labelalertusername");
 const invalidpassword = document.getElementById("labelalertpassword");
 
+const loader = document.querySelector(".loader-container");
+const login_section = document.querySelector(".login");
+
+loader.style = "display:none";
+
 const checkLogin = () => {
   fetch("data.json")
     .then((res) => {
@@ -43,16 +48,22 @@ const checkLogin = () => {
           invalidusername.style = "color:red;font-size:18px;font-weight:bold;";
           invalidusername.textContent = "Invalid Username";
           username.style = "border:2px solid red";
+          loader.style = "display:none";
+          login_section.style = "display:flex";
         } else if (data[i].password !== password.value) {
           invalidpassword.style = "color:red;font-size:18px;font-weight:bold;";
           invalidpassword.textContent = "Invalid Username";
           password.style = "border:2px solid red";
+          loader.style = "display:none";
+          login_section.style = "display:flex";
         }
       }
     });
 };
 
 loginbtn.addEventListener("click", () => {
+  loader.style = "display:flex";
+  login_section.style = "display:none";
   checkLogin();
 });
 
