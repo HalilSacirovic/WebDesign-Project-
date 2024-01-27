@@ -224,5 +224,5 @@ if (renderedProduct.longDescription !== null) {
     renderedProduct.longDescription;
 } else {
   document.getElementById("movie_desc").textContent =
-    "There is no Description about this movie, you can read the plot of the movie clicking on the Features button";
+    "There is no Description about this movie, you can read the plot of the movie clicking on the Features buttonll";
 }

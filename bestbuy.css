@@ -613,10 +613,6 @@ td {
   padding: 50px 0px 50px 10px;
 }
 
-.zero-products {
-  display: none;
-}
-
 #add-to-cart {
   transition: all ease-in-out 0.4s;
 }
