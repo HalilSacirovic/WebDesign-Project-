@@ -20,6 +20,21 @@
     .product-description-model {
         display: block;
     }
+
+
+}
+
+@media (max-width:1400px) {
+    .small-device {
+        display: flex !important;
+        align-items: center;
+        justify-content: end;
+        height: 100%;
+    }
+
+    .cart {
+        display: none !important;
+    }
 }
 
 
@@ -41,16 +56,7 @@
         width: 380px !important;
     }
 
-    .small-device {
-        display: flex !important;
-        align-items: center;
-        justify-content: end;
-        height: 100%;
-    }
 
-    .cart {
-        display: none !important;
-    }
 
 
 
