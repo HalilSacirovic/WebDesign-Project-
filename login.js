@@ -69,6 +69,8 @@ loginbtn.addEventListener("click", () => {
 
 password.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
+    loader.style = "display:flex";
+    login_section.style = "display:none";
     checkLogin();
   }
 });
