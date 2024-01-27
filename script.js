@@ -164,14 +164,26 @@ const renderProducts = () => {
     product_description_model.appendChild(p_sku);
     product_description_model.appendChild(p_model);
 
-    p_store.appendChild(i_store);
+    // p_store.appendChild(i_store);
     // p_store.textContent = "Pick up at Store"
-    p_store.appendChild(document.createTextNode("Pick up at Store"));
+    // p_store.appendChild(document.createTextNode("Pick up at Store"));
     // videcemo dal ce radit
-    p_box.appendChild(i_box);
-    p_box.appendChild(document.createTextNode("Pick up at Store"));
-    product_description_pickup.appendChild(p_store);
+
+    const i_star = document.createElement("i")
+    i_star.classList.add("fa-solid")
+    i_star.classList.add("fa-star")
+    // p_box.appendChild(i_box);
+    p_box.appendChild(document.createTextNode("Review:"));
+    p_box.style = "font-weight:bold;"
+    // product_description_pickup.appendChild(p_store);
     product_description_pickup.appendChild(p_box);
+
+
+    const span = document.createElement("span");
+    span.appendChild(i_star);
+    span.appendChild(document.createTextNode(` ${item.customerReviewAverage}  (${item.customerReviewCount} reviews)`))
+    product_description_pickup.appendChild(span);
+
 
     product_description.appendChild(product_description_name);
     product_description.appendChild(product_description_model);

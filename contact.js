@@ -114,4 +114,7 @@ document.getElementById("submitbutton").addEventListener("click", function () {
       "display:block;color:red;font-size:18px;font-weight:bold";
     message_error.style = "border:3px solid red !important;";
   }
+  else{
+    window.location.href = "succesfull.html"
+  }
 });

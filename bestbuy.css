@@ -130,8 +130,7 @@ HERE IS SECTION FOR PRODUTS
   color: #00a1e7;
 }
 
-.check-in-price {
-}
+.check-in-price {}
 
 .un-order-list {
   padding: 20px 0;
@@ -557,8 +556,7 @@ PRODUCTS SECTION STYLE
   padding-top: 30px !important;
 }
 
-.review-list {
-}
+.review-list {}
 
 .review-rating-div {
   display: flex;
@@ -668,11 +666,9 @@ td {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background-image: linear-gradient(
-    to bottom right,
-    rgba(225, 236, 237, 0.301),
-    white
-  );
+  background-image: linear-gradient(to bottom right,
+      rgba(225, 236, 237, 0.301),
+      white);
 }
 
 .contact-me label {
